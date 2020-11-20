@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="route.path !== '/login'"/>
     <div class="main-container">
       <router-view></router-view>
     </div>
@@ -14,6 +14,11 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  computed: {
+    route: function() {
+      return this.$route;
+    }
   }
 }
 </script>

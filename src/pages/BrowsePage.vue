@@ -1,12 +1,11 @@
 <template>
-  <div class = "container">
-    <div class = "accontainer" >
-    <div v-for="profile in profiles" :key=profile.id>
-      <Profile :profile="profile"></Profile>
-    </div>
+  <div class="container">
+    <div class="accontainer">
+      <div v-for="profile in profiles" :key="profile.id">
+        <Profile :profile="profile"></Profile>
+      </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -14,7 +13,7 @@ import Profile from "../components/ProfileCard";
 export default {
   name: "BrowsePage",
   components: {
-    Profile
+    Profile,
   },
   mounted() {
     this.$store.dispatch("FETCH_PROFILES");
@@ -37,12 +36,11 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 .accontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media only screen and (max-width: 600px) {
   .container {
@@ -50,6 +48,4 @@ export default {
     padding: 0;
   }
 }
-
-
 </style>
