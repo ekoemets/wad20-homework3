@@ -28,6 +28,8 @@ export default {
 <style scoped>
 .container {
   background: #ffffff;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
   width: 50%;
   padding: 20px 100px;
   margin-left: auto;

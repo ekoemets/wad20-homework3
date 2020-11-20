@@ -5,6 +5,7 @@
         <Profile :profile="profile"></Profile>
       </div>
     </div>
+    <div class="filler"></div>
   </div>
 </template>
 
@@ -26,14 +27,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   background: #ffffff;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
   width: 50%;
-  padding-top: 40px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -47,5 +50,8 @@ export default {
     width: 100%;
     padding: 0;
   }
+}
+.filler {
+  flex: 1;
 }
 </style>
