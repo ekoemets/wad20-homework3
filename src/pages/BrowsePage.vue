@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Profile from "../components/ProfileCard";
+import Profile from "../components/Profile";
 export default {
   name: "BrowsePage",
   components: {
