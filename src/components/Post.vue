@@ -19,7 +19,7 @@
         v-bind:class="{ liked: isLiked }"
         @click="toggleLike()"
       >
-        {{ post.likes }}
+        {{ post.likes | capitalizeLastChar}}
       </button>
     </div>
   </div>
@@ -41,6 +41,11 @@ export default {
       this.isLiked = !this.isLiked;
     },
   },
+  filters: {
+    capitalizeLastChar: function (value) {
+      return value.slice(0, -1) + value.slice(-1).toUpperCase();
+    }
+  }
 };
 </script>
 
@@ -108,7 +113,7 @@ video {
   background-repeat: no-repeat;
   background-position: 5px center;
   background-color: #8a8a8a;
-  width: 60px;
+  min-width: 60px;
   height: 25px;
   padding-left: 23px;
   line-height: 10px;
